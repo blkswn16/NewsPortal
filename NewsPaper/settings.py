@@ -149,7 +149,7 @@ STATICFILES_DIRS = [
 ALLOWED_HOSTS = ['127.0.0.1']
 
 LOGIN_URL = '/accounts/login/'
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/news/search/'
 
 
 ACCOUNT_EMAIL_REQUIRED = True
