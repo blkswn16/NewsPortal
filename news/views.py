@@ -29,20 +29,20 @@ class NewsDetail(DetailView):
     context_object_name = 'post'
 
 
-class PostCreate(PermissionRequiredMixin, CreateView):
+class PostCreate(LoginRequiredMixin, PermissionRequiredMixin, CreateView):
     form_class = PostForm
     model = Post
     template_name = 'post_edit.html'
     permission_required = 'news.add_post'
 
-class PostUpdate(PermissionRequiredMixin, UpdateView):
+class PostUpdate(LoginRequiredMixin, PermissionRequiredMixin, UpdateView):
     form_class = PostForm
     model = Post
     template_name = 'post_edit.html'
     permission_required = 'news.change_post'
 
 
-class PostDelete(PermissionRequiredMixin, DeleteView):
+class PostDelete(LoginRequiredMixin, PermissionRequiredMixin, DeleteView):
     model = Post
     template_name = 'post_delete.html'
     success_url = reverse_lazy('post_list')
@@ -85,19 +85,19 @@ class ArticlesList(ListView):
         return context
 
 
-class ArticleCreate(PermissionRequiredMixin, CreateView):
+class ArticleCreate(LoginRequiredMixin, PermissionRequiredMixin, CreateView):
     form_class = PostForm
     model = Post
     template_name = 'article_edit.html'
     permission_required = 'news.add_post'
 
-class ArticleUpdate(PermissionRequiredMixin, UpdateView):
+class ArticleUpdate(LoginRequiredMixin, PermissionRequiredMixin, UpdateView):
     form_class = PostForm
     model = Post
     template_name = 'article_edit.html'
     permission_required = 'news.change_post'
 
-class ArticleDelete(PermissionRequiredMixin, DeleteView):
+class ArticleDelete(LoginRequiredMixin, PermissionRequiredMixin, DeleteView):
     model = Post
     template_name = 'article_delete.html'
     success_url = reverse_lazy('post_list')
