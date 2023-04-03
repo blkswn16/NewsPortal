@@ -4,19 +4,19 @@
 {% load custom_filters %}
 
 {% block title %}
-News
+Articles
 {% endblock title %}
 
 {% block content %}
 
 <h3>{% current_time '%b %d %Y' %}</h3>
 
-<h1>Новостей на странице - "{{ news|length }}" </h1>
+<h1>Статей на странице - "{{ articles|length }}" </h1>
 
 
-   <h1>Все новости</h1>
+   <h1>Все статьи</h1>
    <hr>
-   {% if news %}
+   {% if articles %}
        <table> <!-- Начинаем описывать таблицу -->
            <tr> <!-- Добавляем строку -->
                <td> <!-- Добавляем ячейку в строку -->
@@ -29,21 +29,18 @@ News
                    Текст статьи
                </td>
            </tr> <!-- Не забываем закрыть HTML-тег строки -->
-           {% for post in news %}
+           {% for article in articles %}
            <tr>
-               <!-- Не забываем, что переменные в шаблоне ничем не отличаются
-                от переменных в Python. Здесь также можно получать доступ к
-                полям объекта модели. Например, здесь мы выводим имя,
-                в следующем столбце описание, и т.д.  -->
-               <td>{{ post.title|censor }}</td>
-               <td>{{ post.time_created|date:'d M Y' }}</td>
-               <td>{{ post.text|truncatewords:20|censor }}</td>
+
+               <td>{{ article.title|censor }}</td>
+               <td>{{ article.time_created|date:'d M Y' }}</td>
+               <td>{{ article.text|truncatewords:20|censor }}</td>
 
            </tr>
            {% endfor %}
        </table> <!-- ... и таблицы -->
    {% else %}
-       <h2>Новостей нет!</h2>
+       <h2>Статей нет!</h2>
    {% endif %}
 
       {% if page_obj.has_previous %}
