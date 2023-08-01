@@ -1622,3 +1622,511 @@ Traceback (most recent call last):
     raise ConnectionError(str(exc)) from exc
 kombu.exceptions.OperationalError: Error 10061 connecting to localhost:6379. Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
 2023-08-01 19:50:03 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\servers\basehttp.py:187 - "POST /news/create/ HTTP/1.1" 500 285322
+2023-08-01 21:01:38 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\utils\log.py:241 - Internal Server Error: /news/create/
+Traceback (most recent call last):
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\redis\connection.py", line 699, in connect
+    sock = self.retry.call_with_retry(
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\redis\retry.py", line 46, in call_with_retry
+    return do()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\redis\connection.py", line 700, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\redis\connection.py", line 1002, in _connect
+    raise err
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\redis\connection.py", line 990, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\celery\backends\redis.py", line 119, in reconnect_on_error
+    yield
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\celery\backends\redis.py", line 169, in _consume_from
+    self._pubsub.subscribe(key)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\redis\client.py", line 1634, in subscribe
+    ret_val = self.execute_command("SUBSCRIBE", *new_channels.keys())
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\redis\client.py", line 1469, in execute_command
+    self.connection = self.connection_pool.get_connection(
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\redis\connection.py", line 1457, in get_connection
+    connection.connect()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\redis\connection.py", line 705, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to localhost:6379. Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\redis\connection.py", line 699, in connect
+    sock = self.retry.call_with_retry(
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\redis\retry.py", line 46, in call_with_retry
+    return do()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\redis\connection.py", line 700, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\redis\connection.py", line 1002, in _connect
+    raise err
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\redis\connection.py", line 990, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\connection.py", line 446, in _reraise_as_library_errors
+    yield
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\celery\app\base.py", line 787, in send_task
+    self.backend.on_task_call(P, task_id)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\celery\backends\redis.py", line 365, in on_task_call
+    self.result_consumer.consume_from(task_id)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\celery\backends\redis.py", line 161, in consume_from
+    return self.start(task_id)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\celery\backends\redis.py", line 139, in start
+    self._consume_from(initial_task_id)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\celery\backends\redis.py", line 169, in _consume_from
+    self._pubsub.subscribe(key)
+  File "C:\Users\blkswn\Desktop\Python\Python38\lib\contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\celery\backends\redis.py", line 122, in reconnect_on_error
+    self._ensure(self._reconnect_pubsub, ())
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\celery\backends\redis.py", line 376, in ensure
+    return retry_over_time(
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\utils\functional.py", line 312, in retry_over_time
+    return fun(*args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\celery\backends\redis.py", line 106, in _reconnect_pubsub
+    metas = self.backend.client.mget(self.subscribed_to)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\redis\commands\core.py", line 1987, in mget
+    return self.execute_command("MGET", *args, **options)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\redis\client.py", line 1266, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\redis\connection.py", line 1457, in get_connection
+    connection.connect()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\redis\connection.py", line 705, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to localhost:6379. Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\contrib\auth\mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\contrib\auth\mixins.py", line 109, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\edit.py", line 184, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\edit.py", line 153, in post
+    return self.form_valid(form)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\NewsPaper\news\views.py", line 45, in form_valid
+    send_email_task.delay(post.pk)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\celery\app\task.py", line 425, in delay
+    return self.apply_async(args, kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\celery\app\task.py", line 575, in apply_async
+    return app.send_task(
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\celery\app\base.py", line 788, in send_task
+    amqp.send_task_message(P, name, message, **options)
+  File "C:\Users\blkswn\Desktop\Python\Python38\lib\contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\connection.py", line 450, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: Error 10061 connecting to localhost:6379. Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+2023-08-01 21:01:38 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\servers\basehttp.py:187 - "POST /news/create/ HTTP/1.1" 500 285785
+2023-08-01 21:53:42 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\utils\log.py:241 - Internal Server Error: /news/create/
+Traceback (most recent call last):
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\redis\connection.py", line 699, in connect
+    sock = self.retry.call_with_retry(
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\redis\retry.py", line 46, in call_with_retry
+    return do()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\redis\connection.py", line 700, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\redis\connection.py", line 1002, in _connect
+    raise err
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\redis\connection.py", line 990, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\celery\backends\redis.py", line 119, in reconnect_on_error
+    yield
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\celery\backends\redis.py", line 169, in _consume_from
+    self._pubsub.subscribe(key)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\redis\client.py", line 1634, in subscribe
+    ret_val = self.execute_command("SUBSCRIBE", *new_channels.keys())
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\redis\client.py", line 1469, in execute_command
+    self.connection = self.connection_pool.get_connection(
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\redis\connection.py", line 1457, in get_connection
+    connection.connect()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\redis\connection.py", line 705, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to localhost:6379. Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\redis\connection.py", line 699, in connect
+    sock = self.retry.call_with_retry(
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\redis\retry.py", line 46, in call_with_retry
+    return do()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\redis\connection.py", line 700, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\redis\connection.py", line 1002, in _connect
+    raise err
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\redis\connection.py", line 990, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\connection.py", line 446, in _reraise_as_library_errors
+    yield
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\celery\app\base.py", line 787, in send_task
+    self.backend.on_task_call(P, task_id)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\celery\backends\redis.py", line 365, in on_task_call
+    self.result_consumer.consume_from(task_id)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\celery\backends\redis.py", line 161, in consume_from
+    return self.start(task_id)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\celery\backends\redis.py", line 139, in start
+    self._consume_from(initial_task_id)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\celery\backends\redis.py", line 169, in _consume_from
+    self._pubsub.subscribe(key)
+  File "C:\Users\blkswn\Desktop\Python\Python38\lib\contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\celery\backends\redis.py", line 122, in reconnect_on_error
+    self._ensure(self._reconnect_pubsub, ())
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\celery\backends\redis.py", line 376, in ensure
+    return retry_over_time(
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\utils\functional.py", line 312, in retry_over_time
+    return fun(*args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\celery\backends\redis.py", line 106, in _reconnect_pubsub
+    metas = self.backend.client.mget(self.subscribed_to)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\redis\commands\core.py", line 1987, in mget
+    return self.execute_command("MGET", *args, **options)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\redis\client.py", line 1266, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\redis\connection.py", line 1457, in get_connection
+    connection.connect()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\redis\connection.py", line 705, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to localhost:6379. Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\contrib\auth\mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\contrib\auth\mixins.py", line 109, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\edit.py", line 184, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\edit.py", line 153, in post
+    return self.form_valid(form)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\NewsPaper\news\views.py", line 45, in form_valid
+    send_email_task.delay(post.pk)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\celery\app\task.py", line 425, in delay
+    return self.apply_async(args, kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\celery\app\task.py", line 575, in apply_async
+    return app.send_task(
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\celery\app\base.py", line 788, in send_task
+    amqp.send_task_message(P, name, message, **options)
+  File "C:\Users\blkswn\Desktop\Python\Python38\lib\contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\connection.py", line 450, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: Error 10061 connecting to localhost:6379. Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+2023-08-01 21:53:42 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\servers\basehttp.py:187 - "POST /news/create/ HTTP/1.1" 500 285840
+2023-08-01 21:55:05 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\utils\log.py:241 - Internal Server Error: /news/create/
+Traceback (most recent call last):
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\contrib\auth\mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\contrib\auth\mixins.py", line 109, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\edit.py", line 184, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\edit.py", line 153, in post
+    return self.form_valid(form)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\NewsPaper\news\views.py", line 46, in form_valid
+    return super().form_valid(form)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\edit.py", line 135, in form_valid
+    self.object = form.save()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\forms\models.py", line 549, in save
+    self._save_m2m()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\forms\models.py", line 530, in _save_m2m
+    f.save_form_data(self.instance, cleaned_data[f.name])
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\db\models\fields\related.py", line 1963, in save_form_data
+    getattr(instance, self.attname).set(data)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\db\models\fields\related_descriptors.py", line 1169, in set
+    self.add(*new_objs, through_defaults=through_defaults)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\db\models\fields\related_descriptors.py", line 1087, in add
+    self._add_items(
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\db\models\fields\related_descriptors.py", line 1373, in _add_items
+    signals.m2m_changed.send(
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\dispatch\dispatcher.py", line 176, in send
+    return [
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\dispatch\dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\NewsPaper\news\signals.py", line 39, in notify_about_new_post
+    send_notifications(instance.preview(), instance.pk, instance.title, subscribers_emails)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\NewsPaper\news\signals.py", line 26, in send_notifications
+    msg.send()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\mail\message.py", line 298, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\mail\backends\smtp.py", line 124, in send_messages
+    new_conn_created = self.open()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\mail\backends\smtp.py", line 91, in open
+    self.connection.login(self.username, self.password)
+  File "C:\Users\blkswn\Desktop\Python\Python38\lib\smtplib.py", line 734, in login
+    raise last_exception
+  File "C:\Users\blkswn\Desktop\Python\Python38\lib\smtplib.py", line 723, in login
+    (code, resp) = self.auth(
+  File "C:\Users\blkswn\Desktop\Python\Python38\lib\smtplib.py", line 646, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Error: authentication failed: This user does not have access rights to this service 1690916105-5tWwixwDcqM0')
+2023-08-01 21:55:05 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\servers\basehttp.py:187 - "POST /news/create/ HTTP/1.1" 500 181301
+2023-08-01 21:57:54 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\utils\log.py:241 - Internal Server Error: /news/create/
+Traceback (most recent call last):
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\contrib\auth\mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\contrib\auth\mixins.py", line 109, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\edit.py", line 184, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\edit.py", line 153, in post
+    return self.form_valid(form)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\NewsPaper\news\views.py", line 46, in form_valid
+    return super().form_valid(form)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\edit.py", line 135, in form_valid
+    self.object = form.save()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\forms\models.py", line 549, in save
+    self._save_m2m()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\forms\models.py", line 530, in _save_m2m
+    f.save_form_data(self.instance, cleaned_data[f.name])
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\db\models\fields\related.py", line 1963, in save_form_data
+    getattr(instance, self.attname).set(data)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\db\models\fields\related_descriptors.py", line 1169, in set
+    self.add(*new_objs, through_defaults=through_defaults)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\db\models\fields\related_descriptors.py", line 1087, in add
+    self._add_items(
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\db\models\fields\related_descriptors.py", line 1373, in _add_items
+    signals.m2m_changed.send(
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\dispatch\dispatcher.py", line 176, in send
+    return [
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\dispatch\dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\NewsPaper\news\signals.py", line 39, in notify_about_new_post
+    send_notifications(instance.preview(), instance.pk, instance.title, subscribers_emails)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\NewsPaper\news\signals.py", line 26, in send_notifications
+    msg.send()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\mail\message.py", line 298, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\mail\backends\smtp.py", line 124, in send_messages
+    new_conn_created = self.open()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\mail\backends\smtp.py", line 91, in open
+    self.connection.login(self.username, self.password)
+  File "C:\Users\blkswn\Desktop\Python\Python38\lib\smtplib.py", line 734, in login
+    raise last_exception
+  File "C:\Users\blkswn\Desktop\Python\Python38\lib\smtplib.py", line 723, in login
+    (code, resp) = self.auth(
+  File "C:\Users\blkswn\Desktop\Python\Python38\lib\smtplib.py", line 646, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Error: authentication failed: This user does not have access rights to this service 1690916273-rvWjKeuDWiE0')
+2023-08-01 21:57:54 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\servers\basehttp.py:187 - "POST /news/create/ HTTP/1.1" 500 181301
+2023-08-01 22:06:47 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\utils\log.py:241 - Internal Server Error: /news/create/
+Traceback (most recent call last):
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\contrib\auth\mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\contrib\auth\mixins.py", line 109, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\edit.py", line 184, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\edit.py", line 153, in post
+    return self.form_valid(form)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\NewsPaper\news\views.py", line 46, in form_valid
+    return super().form_valid(form)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\edit.py", line 135, in form_valid
+    self.object = form.save()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\forms\models.py", line 549, in save
+    self._save_m2m()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\forms\models.py", line 530, in _save_m2m
+    f.save_form_data(self.instance, cleaned_data[f.name])
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\db\models\fields\related.py", line 1963, in save_form_data
+    getattr(instance, self.attname).set(data)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\db\models\fields\related_descriptors.py", line 1169, in set
+    self.add(*new_objs, through_defaults=through_defaults)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\db\models\fields\related_descriptors.py", line 1087, in add
+    self._add_items(
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\db\models\fields\related_descriptors.py", line 1373, in _add_items
+    signals.m2m_changed.send(
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\dispatch\dispatcher.py", line 176, in send
+    return [
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\dispatch\dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\NewsPaper\news\signals.py", line 39, in notify_about_new_post
+    send_notifications(instance.preview(), instance.pk, instance.title, subscribers_emails)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\NewsPaper\news\signals.py", line 26, in send_notifications
+    msg.send()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\mail\message.py", line 298, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\mail\backends\smtp.py", line 124, in send_messages
+    new_conn_created = self.open()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\mail\backends\smtp.py", line 91, in open
+    self.connection.login(self.username, self.password)
+  File "C:\Users\blkswn\Desktop\Python\Python38\lib\smtplib.py", line 734, in login
+    raise last_exception
+  File "C:\Users\blkswn\Desktop\Python\Python38\lib\smtplib.py", line 723, in login
+    (code, resp) = self.auth(
+  File "C:\Users\blkswn\Desktop\Python\Python38\lib\smtplib.py", line 646, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Error: authentication failed: This user does not have access rights to this service 1690916807-l6XddGxDRKo0')
+2023-08-01 22:06:47 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\servers\basehttp.py:187 - "POST /news/create/ HTTP/1.1" 500 181301
+2023-08-01 22:07:12 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\utils\log.py:241 - Internal Server Error: /news/create/
+Traceback (most recent call last):
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\contrib\auth\mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\contrib\auth\mixins.py", line 109, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\edit.py", line 184, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\edit.py", line 153, in post
+    return self.form_valid(form)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\NewsPaper\news\views.py", line 46, in form_valid
+    return super().form_valid(form)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\edit.py", line 135, in form_valid
+    self.object = form.save()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\forms\models.py", line 549, in save
+    self._save_m2m()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\forms\models.py", line 530, in _save_m2m
+    f.save_form_data(self.instance, cleaned_data[f.name])
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\db\models\fields\related.py", line 1963, in save_form_data
+    getattr(instance, self.attname).set(data)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\db\models\fields\related_descriptors.py", line 1169, in set
+    self.add(*new_objs, through_defaults=through_defaults)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\db\models\fields\related_descriptors.py", line 1087, in add
+    self._add_items(
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\db\models\fields\related_descriptors.py", line 1373, in _add_items
+    signals.m2m_changed.send(
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\dispatch\dispatcher.py", line 176, in send
+    return [
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\dispatch\dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\NewsPaper\news\signals.py", line 39, in notify_about_new_post
+    send_notifications(instance.preview(), instance.pk, instance.title, subscribers_emails)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\NewsPaper\news\signals.py", line 26, in send_notifications
+    msg.send()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\mail\message.py", line 298, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\mail\backends\smtp.py", line 124, in send_messages
+    new_conn_created = self.open()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\mail\backends\smtp.py", line 91, in open
+    self.connection.login(self.username, self.password)
+  File "C:\Users\blkswn\Desktop\Python\Python38\lib\smtplib.py", line 734, in login
+    raise last_exception
+  File "C:\Users\blkswn\Desktop\Python\Python38\lib\smtplib.py", line 723, in login
+    (code, resp) = self.auth(
+  File "C:\Users\blkswn\Desktop\Python\Python38\lib\smtplib.py", line 646, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Error: authentication failed: This user does not have access rights to this service 1690916832-B7XxrGxDR8c0')
+2023-08-01 22:07:12 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\servers\basehttp.py:187 - "POST /news/create/ HTTP/1.1" 500 181197
+2023-08-01 22:08:58 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\utils\log.py:241 - Internal Server Error: /news/create/
+Traceback (most recent call last):
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\contrib\auth\mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\contrib\auth\mixins.py", line 109, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\edit.py", line 184, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\edit.py", line 153, in post
+    return self.form_valid(form)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\NewsPaper\news\views.py", line 46, in form_valid
+    return super().form_valid(form)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\edit.py", line 135, in form_valid
+    self.object = form.save()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\forms\models.py", line 549, in save
+    self._save_m2m()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\forms\models.py", line 530, in _save_m2m
+    f.save_form_data(self.instance, cleaned_data[f.name])
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\db\models\fields\related.py", line 1963, in save_form_data
+    getattr(instance, self.attname).set(data)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\db\models\fields\related_descriptors.py", line 1169, in set
+    self.add(*new_objs, through_defaults=through_defaults)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\db\models\fields\related_descriptors.py", line 1087, in add
+    self._add_items(
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\db\models\fields\related_descriptors.py", line 1373, in _add_items
+    signals.m2m_changed.send(
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\dispatch\dispatcher.py", line 176, in send
+    return [
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\dispatch\dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\NewsPaper\news\signals.py", line 39, in notify_about_new_post
+    send_notifications(instance.preview(), instance.pk, instance.title, subscribers_emails)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\NewsPaper\news\signals.py", line 26, in send_notifications
+    msg.send()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\mail\message.py", line 298, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\mail\backends\smtp.py", line 124, in send_messages
+    new_conn_created = self.open()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\mail\backends\smtp.py", line 91, in open
+    self.connection.login(self.username, self.password)
+  File "C:\Users\blkswn\Desktop\Python\Python38\lib\smtplib.py", line 734, in login
+    raise last_exception
+  File "C:\Users\blkswn\Desktop\Python\Python38\lib\smtplib.py", line 723, in login
+    (code, resp) = self.auth(
+  File "C:\Users\blkswn\Desktop\Python\Python38\lib\smtplib.py", line 646, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Error: authentication failed: This user does not have access rights to this service 1690916938-w8XTj2xqJuQ0')
+2023-08-01 22:08:58 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\servers\basehttp.py:187 - "POST /news/create/ HTTP/1.1" 500 181197

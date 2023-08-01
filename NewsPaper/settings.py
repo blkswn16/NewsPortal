@@ -17,6 +17,8 @@ from django.conf import settings
 from dotenv import load_dotenv, find_dotenv
 from django.contrib.auth import login
 
+load_dotenv(find_dotenv())
+
 logger = logging.getLogger('NewsPaper.news.NewsPaper')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -184,8 +186,8 @@ EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')  # пароль от по
 EMAIL_USE_SSL = True
 DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL')
 
-CELERY_BROKER_URL = 'redis://localhost:6379'
-CELERY_RESULT_BACKEND = 'redis://localhost:6379'
+CELERY_BROKER_URL = 'redis://:Z7FpFSis94TlS4gukbTns1C88RYNHynP@redis-10535.c1.asia-northeast1-1.gce.cloud.redislabs.com:10535'
+CELERY_RESULT_BACKEND = 'redis://:Z7FpFSis94TlS4gukbTns1C88RYNHynP@redis-10535.c1.asia-northeast1-1.gce.cloud.redislabs.com:10535'
 CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
