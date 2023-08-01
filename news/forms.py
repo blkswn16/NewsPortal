@@ -9,9 +9,13 @@ class PostForm(forms.ModelForm):
     author = forms.ModelChoiceField(queryset=Author.objects.all())
     class Meta:
        model = Post
+       type = 'NW'
        fields = ['title',
-                 'author',
+                 'post_author',
                  'text',
+                 'type',
+                 'post_rating',
+                 'category',
                  ]
 
     def clean(self):

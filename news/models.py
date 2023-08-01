@@ -20,15 +20,19 @@ class Author(models.Model):
 class Category(models.Model):
     category_name = models.CharField(max_length=255,
                                      unique=True)
+    subscribers = models.ManyToManyField(User, related_name='categories', blank=True)
 
+    def __str__(self):
+        return self.category_name
 
-article = 'AR'
-news = 'NE'
-TYPES = [(article, 'Статья'),
-          (news, 'Новость')
-]
 
 class Post(models.Model):
+
+    article = 'AR'
+    news = 'NE'
+    TYPES = [(article, 'Статья'),
+             (news, 'Новость')
+             ]
     title = models.CharField(max_length=255)
     text = models.TextField()
     time_created = models.DateTimeField(auto_now_add=True)
@@ -54,12 +58,15 @@ class Post(models.Model):
         return f'{self.title}: {self.text[:20]}'
 
     def get_absolute_url(self):
-        return reverse('news_detail', args=[str(self.id)])
+        return f'/news/{self.id}'
 
 
 class PostCategory(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f'{self.category}, {self.post}'
 
 
 class Comment(models.Model):

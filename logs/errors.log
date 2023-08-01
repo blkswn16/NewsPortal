@@ -1,0 +1,1624 @@
+2023-07-29 13:18:39 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\utils\log.py:241 - Internal Server Error: /news/categories/5
+Traceback (most recent call last):
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'unsubscribe' with arguments '('',)' not found. 1 pattern(s) tried: ['news/categories/(?P<pk>[0-9]+)/unsubscribe\\Z']
+2023-07-29 13:18:39 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\servers\basehttp.py:187 - "GET /news/categories/5 HTTP/1.1" 500 191795
+2023-07-29 13:19:36 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\utils\log.py:241 - Internal Server Error: /news/categories/5
+Traceback (most recent call last):
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'unsubscribe' with arguments '('',)' not found. 1 pattern(s) tried: ['news/categories/(?P<pk>[0-9]+)/unsubscribe\\Z']
+2023-07-29 13:19:36 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\servers\basehttp.py:187 - "GET /news/categories/5 HTTP/1.1" 500 191795
+2023-07-29 13:19:38 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\utils\log.py:241 - Internal Server Error: /news/categories/4
+Traceback (most recent call last):
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'unsubscribe' with arguments '('',)' not found. 1 pattern(s) tried: ['news/categories/(?P<pk>[0-9]+)/unsubscribe\\Z']
+2023-07-29 13:19:38 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\servers\basehttp.py:187 - "GET /news/categories/4 HTTP/1.1" 500 208259
+2023-07-29 13:32:44 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\utils\log.py:241 - Internal Server Error: /news/categories/5
+Traceback (most recent call last):
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'unsubscribe' with arguments '('',)' not found. 1 pattern(s) tried: ['news/categories/(?P<pk>[0-9]+)/unsubscribe\\Z']
+2023-07-29 13:32:44 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\servers\basehttp.py:187 - "GET /news/categories/5 HTTP/1.1" 500 191795
+2023-07-29 13:34:37 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\utils\log.py:241 - Internal Server Error: /news/categories/5
+Traceback (most recent call last):
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\defaulttags.py", line 1026, in find_library
+    return parser.libraries[name]
+KeyError: 'censor'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\defaulttags.py", line 1088, in load
+    lib = find_library(parser, name)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\defaulttags.py", line 1028, in find_library
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'censor' is not a registered tag library. Must be one of:
+account
+admin_list
+admin_modify
+admin_urls
+cache
+custom_filters
+custom_tags
+flatpages
+i18n
+l10n
+log
+socialaccount
+static
+tz
+2023-07-29 13:34:37 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\servers\basehttp.py:187 - "GET /news/categories/5 HTTP/1.1" 500 204817
+2023-07-29 13:36:20 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\utils\log.py:241 - Internal Server Error: /news/categories/5
+Traceback (most recent call last):
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'post_detail' not found. 'post_detail' is not a valid view function or pattern name.
+2023-07-29 13:36:20 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\servers\basehttp.py:187 - "GET /news/categories/5 HTTP/1.1" 500 200075
+2023-07-29 13:37:45 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\utils\log.py:241 - Internal Server Error: /news/categories/5
+Traceback (most recent call last):
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'post' not found. 'post' is not a valid view function or pattern name.
+2023-07-29 13:37:45 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\servers\basehttp.py:187 - "GET /news/categories/5 HTTP/1.1" 500 199907
+2023-07-29 13:38:01 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\utils\log.py:241 - Internal Server Error: /news/categories/5
+Traceback (most recent call last):
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'news' not found. 'news' is not a valid view function or pattern name.
+2023-07-29 13:38:01 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\servers\basehttp.py:187 - "GET /news/categories/5 HTTP/1.1" 500 199907
+2023-07-29 13:43:02 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\utils\log.py:241 - Internal Server Error: /news/categories/5
+Traceback (most recent call last):
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'post_detail' not found. 'post_detail' is not a valid view function or pattern name.
+2023-07-29 13:43:02 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\servers\basehttp.py:187 - "GET /news/categories/5 HTTP/1.1" 500 200998
+2023-07-29 13:43:22 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\utils\log.py:241 - Internal Server Error: /news/categories/5
+Traceback (most recent call last):
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'unsubscribe' with arguments '('',)' not found. 1 pattern(s) tried: ['news/categories/(?P<pk>[0-9]+)/unsubscribe\\Z']
+2023-07-29 13:43:22 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\servers\basehttp.py:187 - "GET /news/categories/5 HTTP/1.1" 500 211149
+2023-07-29 13:44:13 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\utils\log.py:241 - Internal Server Error: /news/categories/5
+Traceback (most recent call last):
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'unsubscribe' with arguments '('',)' not found. 1 pattern(s) tried: ['news/categories/(?P<pk>[0-9]+)/unsubscribe\\Z']
+2023-07-29 13:44:13 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\servers\basehttp.py:187 - "GET /news/categories/5 HTTP/1.1" 500 191932
+2023-07-29 13:45:42 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\utils\log.py:241 - Internal Server Error: /news/categories/5
+Traceback (most recent call last):
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'unsubscribe' with arguments '('',)' not found. 1 pattern(s) tried: ['news/categories/(?P<pk>[0-9]+)/unsubscribe\\Z']
+2023-07-29 13:45:42 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\servers\basehttp.py:187 - "GET /news/categories/5 HTTP/1.1" 500 191904
+2023-07-29 13:45:45 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\utils\log.py:241 - Internal Server Error: /news/categories/5
+Traceback (most recent call last):
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'unsubscribe' with arguments '('',)' not found. 1 pattern(s) tried: ['news/categories/(?P<pk>[0-9]+)/unsubscribe\\Z']
+2023-07-29 13:45:45 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\servers\basehttp.py:187 - "GET /news/categories/5 HTTP/1.1" 500 191904
+2023-07-29 13:45:45 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\utils\log.py:241 - Internal Server Error: /news/categories/5
+Traceback (most recent call last):
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'unsubscribe' with arguments '('',)' not found. 1 pattern(s) tried: ['news/categories/(?P<pk>[0-9]+)/unsubscribe\\Z']
+2023-07-29 13:45:45 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\servers\basehttp.py:187 - "GET /news/categories/5 HTTP/1.1" 500 191904
+2023-07-29 13:45:45 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\utils\log.py:241 - Internal Server Error: /news/categories/5
+Traceback (most recent call last):
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'unsubscribe' with arguments '('',)' not found. 1 pattern(s) tried: ['news/categories/(?P<pk>[0-9]+)/unsubscribe\\Z']
+2023-07-29 13:45:45 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\servers\basehttp.py:187 - "GET /news/categories/5 HTTP/1.1" 500 191904
+2023-07-29 13:48:13 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\utils\log.py:241 - Internal Server Error: /news/categories/5
+Traceback (most recent call last):
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'unsubscribe' with arguments '('',)' not found. 1 pattern(s) tried: ['news/categories/(?P<pk>[0-9]+)/unsubscribe\\Z']
+2023-07-29 13:48:13 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\servers\basehttp.py:187 - "GET /news/categories/5 HTTP/1.1" 500 191932
+2023-07-31 23:38:13 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\utils\log.py:241 - Internal Server Error: /news/create/
+Traceback (most recent call last):
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\contrib\auth\mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\contrib\auth\mixins.py", line 109, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\edit.py", line 184, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\edit.py", line 153, in post
+    return self.form_valid(form)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\edit.py", line 135, in form_valid
+    self.object = form.save()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\forms\models.py", line 549, in save
+    self._save_m2m()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\forms\models.py", line 530, in _save_m2m
+    f.save_form_data(self.instance, cleaned_data[f.name])
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\db\models\fields\related.py", line 1963, in save_form_data
+    getattr(instance, self.attname).set(data)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\db\models\fields\related_descriptors.py", line 1169, in set
+    self.add(*new_objs, through_defaults=through_defaults)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\db\models\fields\related_descriptors.py", line 1087, in add
+    self._add_items(
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\db\models\fields\related_descriptors.py", line 1373, in _add_items
+    signals.m2m_changed.send(
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\dispatch\dispatcher.py", line 176, in send
+    return [
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\dispatch\dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\NewsPaper\news\signals.py", line 39, in notify_about_new_post
+    send_notifications(instance.preview(), instance.pk, instance.title, subscribers_emails)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\NewsPaper\news\signals.py", line 26, in send_notifications
+    msg.send()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\mail\message.py", line 298, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\mail\backends\smtp.py", line 131, in send_messages
+    sent = self._send(message)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\mail\backends\smtp.py", line 149, in _send
+    self.connection.sendmail(
+  File "C:\Users\blkswn\Desktop\Python\Python38\lib\smtplib.py", line 871, in sendmail
+    raise SMTPSenderRefused(code, resp, from_addr)
+smtplib.SMTPSenderRefused: (503, b'5.5.4 Error: send AUTH command first. 1690835894-DcXQ1njDYuQ0-kgCKTQgP', 'None')
+2023-07-31 23:38:13 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\servers\basehttp.py:187 - "POST /news/create/ HTTP/1.1" 500 166819
+2023-07-31 23:40:26 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\utils\log.py:241 - Internal Server Error: /news/create/
+Traceback (most recent call last):
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\contrib\auth\mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\contrib\auth\mixins.py", line 109, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\edit.py", line 184, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\edit.py", line 153, in post
+    return self.form_valid(form)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\edit.py", line 135, in form_valid
+    self.object = form.save()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\forms\models.py", line 549, in save
+    self._save_m2m()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\forms\models.py", line 530, in _save_m2m
+    f.save_form_data(self.instance, cleaned_data[f.name])
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\db\models\fields\related.py", line 1963, in save_form_data
+    getattr(instance, self.attname).set(data)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\db\models\fields\related_descriptors.py", line 1169, in set
+    self.add(*new_objs, through_defaults=through_defaults)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\db\models\fields\related_descriptors.py", line 1087, in add
+    self._add_items(
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\db\models\fields\related_descriptors.py", line 1373, in _add_items
+    signals.m2m_changed.send(
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\dispatch\dispatcher.py", line 176, in send
+    return [
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\dispatch\dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\NewsPaper\news\signals.py", line 39, in notify_about_new_post
+    send_notifications(instance.preview(), instance.pk, instance.title, subscribers_emails)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\NewsPaper\news\signals.py", line 26, in send_notifications
+    msg.send()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\mail\message.py", line 298, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\mail\backends\smtp.py", line 131, in send_messages
+    sent = self._send(message)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\mail\backends\smtp.py", line 149, in _send
+    self.connection.sendmail(
+  File "C:\Users\blkswn\Desktop\Python\Python38\lib\smtplib.py", line 871, in sendmail
+    raise SMTPSenderRefused(code, resp, from_addr)
+smtplib.SMTPSenderRefused: (503, b'5.5.4 Error: send AUTH command first. 1690836027-ReXHwOlWuiE0-XGE2ugkJ', 'None')
+2023-07-31 23:40:26 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\servers\basehttp.py:187 - "POST /news/create/ HTTP/1.1" 500 166820
+2023-07-31 23:42:25 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\utils\log.py:241 - Internal Server Error: /news/create/
+Traceback (most recent call last):
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\contrib\auth\mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\contrib\auth\mixins.py", line 109, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\edit.py", line 184, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\edit.py", line 153, in post
+    return self.form_valid(form)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\edit.py", line 135, in form_valid
+    self.object = form.save()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\forms\models.py", line 549, in save
+    self._save_m2m()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\forms\models.py", line 530, in _save_m2m
+    f.save_form_data(self.instance, cleaned_data[f.name])
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\db\models\fields\related.py", line 1963, in save_form_data
+    getattr(instance, self.attname).set(data)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\db\models\fields\related_descriptors.py", line 1169, in set
+    self.add(*new_objs, through_defaults=through_defaults)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\db\models\fields\related_descriptors.py", line 1087, in add
+    self._add_items(
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\db\models\fields\related_descriptors.py", line 1373, in _add_items
+    signals.m2m_changed.send(
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\dispatch\dispatcher.py", line 176, in send
+    return [
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\dispatch\dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\NewsPaper\news\signals.py", line 39, in notify_about_new_post
+    send_notifications(instance.preview(), instance.pk, instance.title, subscribers_emails)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\NewsPaper\news\signals.py", line 26, in send_notifications
+    msg.send()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\mail\message.py", line 298, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\mail\backends\smtp.py", line 124, in send_messages
+    new_conn_created = self.open()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\mail\backends\smtp.py", line 91, in open
+    self.connection.login(self.username, self.password)
+  File "C:\Users\blkswn\Desktop\Python\Python38\lib\smtplib.py", line 734, in login
+    raise last_exception
+  File "C:\Users\blkswn\Desktop\Python\Python38\lib\smtplib.py", line 723, in login
+    (code, resp) = self.auth(
+  File "C:\Users\blkswn\Desktop\Python\Python38\lib\smtplib.py", line 646, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Error: authentication failed: This user does not have access rights to this service 1690836146-PgXJHQlDfKo0')
+2023-07-31 23:42:25 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\servers\basehttp.py:187 - "POST /news/create/ HTTP/1.1" 500 175626
+2023-08-01 19:29:15 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\utils\log.py:241 - Internal Server Error: /news/create/
+Traceback (most recent call last):
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\contrib\auth\mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\contrib\auth\mixins.py", line 109, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\edit.py", line 184, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\edit.py", line 153, in post
+    return self.form_valid(form)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\edit.py", line 135, in form_valid
+    self.object = form.save()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\forms\models.py", line 549, in save
+    self._save_m2m()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\forms\models.py", line 530, in _save_m2m
+    f.save_form_data(self.instance, cleaned_data[f.name])
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\db\models\fields\related.py", line 1963, in save_form_data
+    getattr(instance, self.attname).set(data)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\db\models\fields\related_descriptors.py", line 1169, in set
+    self.add(*new_objs, through_defaults=through_defaults)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\db\models\fields\related_descriptors.py", line 1087, in add
+    self._add_items(
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\db\models\fields\related_descriptors.py", line 1373, in _add_items
+    signals.m2m_changed.send(
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\dispatch\dispatcher.py", line 176, in send
+    return [
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\dispatch\dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\NewsPaper\news\signals.py", line 39, in notify_about_new_post
+    send_notifications(instance.preview(), instance.pk, instance.title, subscribers_emails)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\NewsPaper\news\signals.py", line 26, in send_notifications
+    msg.send()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\mail\message.py", line 298, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\mail\backends\smtp.py", line 124, in send_messages
+    new_conn_created = self.open()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\mail\backends\smtp.py", line 91, in open
+    self.connection.login(self.username, self.password)
+  File "C:\Users\blkswn\Desktop\Python\Python38\lib\smtplib.py", line 734, in login
+    raise last_exception
+  File "C:\Users\blkswn\Desktop\Python\Python38\lib\smtplib.py", line 723, in login
+    (code, resp) = self.auth(
+  File "C:\Users\blkswn\Desktop\Python\Python38\lib\smtplib.py", line 646, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Error: authentication failed: This user does not have access rights to this service 1690907354-ETUMf5wDZGk0')
+2023-08-01 19:29:15 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\servers\basehttp.py:187 - "POST /news/create/ HTTP/1.1" 500 175834
+2023-08-01 19:29:25 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\utils\log.py:241 - Internal Server Error: /news/create/
+Traceback (most recent call last):
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\contrib\auth\mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\contrib\auth\mixins.py", line 109, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\edit.py", line 184, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\edit.py", line 153, in post
+    return self.form_valid(form)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\edit.py", line 135, in form_valid
+    self.object = form.save()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\forms\models.py", line 549, in save
+    self._save_m2m()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\forms\models.py", line 530, in _save_m2m
+    f.save_form_data(self.instance, cleaned_data[f.name])
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\db\models\fields\related.py", line 1963, in save_form_data
+    getattr(instance, self.attname).set(data)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\db\models\fields\related_descriptors.py", line 1169, in set
+    self.add(*new_objs, through_defaults=through_defaults)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\db\models\fields\related_descriptors.py", line 1087, in add
+    self._add_items(
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\db\models\fields\related_descriptors.py", line 1373, in _add_items
+    signals.m2m_changed.send(
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\dispatch\dispatcher.py", line 176, in send
+    return [
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\dispatch\dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\NewsPaper\news\signals.py", line 39, in notify_about_new_post
+    send_notifications(instance.preview(), instance.pk, instance.title, subscribers_emails)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\NewsPaper\news\signals.py", line 26, in send_notifications
+    msg.send()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\mail\message.py", line 298, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\mail\backends\smtp.py", line 124, in send_messages
+    new_conn_created = self.open()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\mail\backends\smtp.py", line 91, in open
+    self.connection.login(self.username, self.password)
+  File "C:\Users\blkswn\Desktop\Python\Python38\lib\smtplib.py", line 734, in login
+    raise last_exception
+  File "C:\Users\blkswn\Desktop\Python\Python38\lib\smtplib.py", line 723, in login
+    (code, resp) = self.auth(
+  File "C:\Users\blkswn\Desktop\Python\Python38\lib\smtplib.py", line 646, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Error: authentication failed: This user does not have access rights to this service 1690907365-OTUmejvDU8c0')
+2023-08-01 19:29:25 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\servers\basehttp.py:187 - "POST /news/create/ HTTP/1.1" 500 175834
+2023-08-01 19:32:43 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\utils\log.py:241 - Internal Server Error: /news/create/
+Traceback (most recent call last):
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\utils\functional.py", line 30, in __call__
+    return self.__value__
+AttributeError: 'ChannelPromise' object has no attribute '__value__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\connection.py", line 446, in _reraise_as_library_errors
+    yield
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\connection.py", line 433, in _ensure_connection
+    return retry_over_time(
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\utils\functional.py", line 312, in retry_over_time
+    return fun(*args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\connection.py", line 877, in _connection_factory
+    self._connection = self._establish_connection()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\connection.py", line 812, in _establish_connection
+    conn = self.transport.establish_connection()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\transport\pyamqp.py", line 201, in establish_connection
+    conn.connect()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\amqp\connection.py", line 323, in connect
+    self.transport.connect()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\amqp\transport.py", line 129, in connect
+    self._connect(self.host, self.port, self.connect_timeout)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\amqp\transport.py", line 184, in _connect
+    self.sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\contrib\auth\mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\contrib\auth\mixins.py", line 109, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\edit.py", line 184, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\edit.py", line 153, in post
+    return self.form_valid(form)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\NewsPaper\news\views.py", line 45, in form_valid
+    send_email_task.delay(post.pk)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\celery\app\task.py", line 425, in delay
+    return self.apply_async(args, kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\celery\app\task.py", line 575, in apply_async
+    return app.send_task(
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\celery\app\base.py", line 788, in send_task
+    amqp.send_task_message(P, name, message, **options)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\celery\app\amqp.py", line 510, in send_task_message
+    ret = producer.publish(
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\messaging.py", line 177, in publish
+    return _publish(
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\connection.py", line 523, in _ensured
+    return fun(*args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\messaging.py", line 186, in _publish
+    channel = self.channel
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\messaging.py", line 209, in _get_channel
+    channel = self._channel = channel()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\utils\functional.py", line 32, in __call__
+    value = self.__value__ = self.__contract__()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\messaging.py", line 225, in <lambda>
+    channel = ChannelPromise(lambda: connection.default_channel)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\connection.py", line 895, in default_channel
+    self._ensure_connection(**conn_opts)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\connection.py", line 433, in _ensure_connection
+    return retry_over_time(
+  File "C:\Users\blkswn\Desktop\Python\Python38\lib\contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\connection.py", line 450, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2023-08-01 19:32:43 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\servers\basehttp.py:187 - "POST /news/create/ HTTP/1.1" 500 238392
+2023-08-01 19:32:56 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\utils\log.py:241 - Internal Server Error: /news/create/
+Traceback (most recent call last):
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\utils\functional.py", line 30, in __call__
+    return self.__value__
+AttributeError: 'ChannelPromise' object has no attribute '__value__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\connection.py", line 446, in _reraise_as_library_errors
+    yield
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\connection.py", line 433, in _ensure_connection
+    return retry_over_time(
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\utils\functional.py", line 312, in retry_over_time
+    return fun(*args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\connection.py", line 877, in _connection_factory
+    self._connection = self._establish_connection()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\connection.py", line 812, in _establish_connection
+    conn = self.transport.establish_connection()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\transport\pyamqp.py", line 201, in establish_connection
+    conn.connect()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\amqp\connection.py", line 323, in connect
+    self.transport.connect()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\amqp\transport.py", line 129, in connect
+    self._connect(self.host, self.port, self.connect_timeout)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\amqp\transport.py", line 184, in _connect
+    self.sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\contrib\auth\mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\contrib\auth\mixins.py", line 109, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\edit.py", line 184, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\edit.py", line 153, in post
+    return self.form_valid(form)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\NewsPaper\news\views.py", line 45, in form_valid
+    send_email_task.delay(post.pk)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\celery\app\task.py", line 425, in delay
+    return self.apply_async(args, kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\celery\app\task.py", line 575, in apply_async
+    return app.send_task(
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\celery\app\base.py", line 788, in send_task
+    amqp.send_task_message(P, name, message, **options)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\celery\app\amqp.py", line 510, in send_task_message
+    ret = producer.publish(
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\messaging.py", line 177, in publish
+    return _publish(
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\connection.py", line 523, in _ensured
+    return fun(*args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\messaging.py", line 186, in _publish
+    channel = self.channel
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\messaging.py", line 209, in _get_channel
+    channel = self._channel = channel()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\utils\functional.py", line 32, in __call__
+    value = self.__value__ = self.__contract__()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\messaging.py", line 225, in <lambda>
+    channel = ChannelPromise(lambda: connection.default_channel)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\connection.py", line 895, in default_channel
+    self._ensure_connection(**conn_opts)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\connection.py", line 433, in _ensure_connection
+    return retry_over_time(
+  File "C:\Users\blkswn\Desktop\Python\Python38\lib\contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\connection.py", line 450, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2023-08-01 19:32:56 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\servers\basehttp.py:187 - "POST /news/create/ HTTP/1.1" 500 238393
+2023-08-01 19:33:40 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\utils\log.py:241 - Internal Server Error: /news/create/
+Traceback (most recent call last):
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\utils\functional.py", line 30, in __call__
+    return self.__value__
+AttributeError: 'ChannelPromise' object has no attribute '__value__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\connection.py", line 446, in _reraise_as_library_errors
+    yield
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\connection.py", line 433, in _ensure_connection
+    return retry_over_time(
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\utils\functional.py", line 312, in retry_over_time
+    return fun(*args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\connection.py", line 877, in _connection_factory
+    self._connection = self._establish_connection()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\connection.py", line 812, in _establish_connection
+    conn = self.transport.establish_connection()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\transport\pyamqp.py", line 201, in establish_connection
+    conn.connect()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\amqp\connection.py", line 323, in connect
+    self.transport.connect()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\amqp\transport.py", line 129, in connect
+    self._connect(self.host, self.port, self.connect_timeout)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\amqp\transport.py", line 184, in _connect
+    self.sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\contrib\auth\mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\contrib\auth\mixins.py", line 109, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\edit.py", line 184, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\edit.py", line 153, in post
+    return self.form_valid(form)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\NewsPaper\news\views.py", line 45, in form_valid
+    send_email_task.delay(post.pk)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\celery\app\task.py", line 425, in delay
+    return self.apply_async(args, kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\celery\app\task.py", line 575, in apply_async
+    return app.send_task(
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\celery\app\base.py", line 788, in send_task
+    amqp.send_task_message(P, name, message, **options)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\celery\app\amqp.py", line 510, in send_task_message
+    ret = producer.publish(
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\messaging.py", line 177, in publish
+    return _publish(
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\connection.py", line 523, in _ensured
+    return fun(*args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\messaging.py", line 186, in _publish
+    channel = self.channel
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\messaging.py", line 209, in _get_channel
+    channel = self._channel = channel()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\utils\functional.py", line 32, in __call__
+    value = self.__value__ = self.__contract__()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\messaging.py", line 225, in <lambda>
+    channel = ChannelPromise(lambda: connection.default_channel)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\connection.py", line 895, in default_channel
+    self._ensure_connection(**conn_opts)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\connection.py", line 433, in _ensure_connection
+    return retry_over_time(
+  File "C:\Users\blkswn\Desktop\Python\Python38\lib\contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\connection.py", line 450, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2023-08-01 19:35:37 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\utils\log.py:241 - Internal Server Error: /news/create/
+Traceback (most recent call last):
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\utils\functional.py", line 30, in __call__
+    return self.__value__
+AttributeError: 'ChannelPromise' object has no attribute '__value__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\connection.py", line 446, in _reraise_as_library_errors
+    yield
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\connection.py", line 433, in _ensure_connection
+    return retry_over_time(
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\utils\functional.py", line 312, in retry_over_time
+    return fun(*args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\connection.py", line 877, in _connection_factory
+    self._connection = self._establish_connection()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\connection.py", line 812, in _establish_connection
+    conn = self.transport.establish_connection()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\transport\pyamqp.py", line 201, in establish_connection
+    conn.connect()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\amqp\connection.py", line 323, in connect
+    self.transport.connect()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\amqp\transport.py", line 129, in connect
+    self._connect(self.host, self.port, self.connect_timeout)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\amqp\transport.py", line 184, in _connect
+    self.sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\contrib\auth\mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\contrib\auth\mixins.py", line 109, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\edit.py", line 184, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\edit.py", line 153, in post
+    return self.form_valid(form)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\NewsPaper\news\views.py", line 45, in form_valid
+    send_email_task.delay(post.pk)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\celery\app\task.py", line 425, in delay
+    return self.apply_async(args, kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\celery\app\task.py", line 575, in apply_async
+    return app.send_task(
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\celery\app\base.py", line 788, in send_task
+    amqp.send_task_message(P, name, message, **options)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\celery\app\amqp.py", line 510, in send_task_message
+    ret = producer.publish(
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\messaging.py", line 177, in publish
+    return _publish(
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\connection.py", line 523, in _ensured
+    return fun(*args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\messaging.py", line 186, in _publish
+    channel = self.channel
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\messaging.py", line 209, in _get_channel
+    channel = self._channel = channel()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\utils\functional.py", line 32, in __call__
+    value = self.__value__ = self.__contract__()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\messaging.py", line 225, in <lambda>
+    channel = ChannelPromise(lambda: connection.default_channel)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\connection.py", line 895, in default_channel
+    self._ensure_connection(**conn_opts)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\connection.py", line 433, in _ensure_connection
+    return retry_over_time(
+  File "C:\Users\blkswn\Desktop\Python\Python38\lib\contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\connection.py", line 450, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2023-08-01 19:35:37 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\servers\basehttp.py:187 - "POST /news/create/ HTTP/1.1" 500 238417
+2023-08-01 19:50:03 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\utils\log.py:241 - Internal Server Error: /news/create/
+Traceback (most recent call last):
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\redis\connection.py", line 699, in connect
+    sock = self.retry.call_with_retry(
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\redis\retry.py", line 46, in call_with_retry
+    return do()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\redis\connection.py", line 700, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\redis\connection.py", line 1002, in _connect
+    raise err
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\redis\connection.py", line 990, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\celery\backends\redis.py", line 119, in reconnect_on_error
+    yield
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\celery\backends\redis.py", line 169, in _consume_from
+    self._pubsub.subscribe(key)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\redis\client.py", line 1634, in subscribe
+    ret_val = self.execute_command("SUBSCRIBE", *new_channels.keys())
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\redis\client.py", line 1469, in execute_command
+    self.connection = self.connection_pool.get_connection(
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\redis\connection.py", line 1457, in get_connection
+    connection.connect()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\redis\connection.py", line 705, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to localhost:6379. Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\redis\connection.py", line 699, in connect
+    sock = self.retry.call_with_retry(
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\redis\retry.py", line 46, in call_with_retry
+    return do()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\redis\connection.py", line 700, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\redis\connection.py", line 1002, in _connect
+    raise err
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\redis\connection.py", line 990, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\connection.py", line 446, in _reraise_as_library_errors
+    yield
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\celery\app\base.py", line 787, in send_task
+    self.backend.on_task_call(P, task_id)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\celery\backends\redis.py", line 365, in on_task_call
+    self.result_consumer.consume_from(task_id)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\celery\backends\redis.py", line 161, in consume_from
+    return self.start(task_id)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\celery\backends\redis.py", line 139, in start
+    self._consume_from(initial_task_id)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\celery\backends\redis.py", line 169, in _consume_from
+    self._pubsub.subscribe(key)
+  File "C:\Users\blkswn\Desktop\Python\Python38\lib\contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\celery\backends\redis.py", line 122, in reconnect_on_error
+    self._ensure(self._reconnect_pubsub, ())
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\celery\backends\redis.py", line 376, in ensure
+    return retry_over_time(
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\utils\functional.py", line 312, in retry_over_time
+    return fun(*args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\celery\backends\redis.py", line 106, in _reconnect_pubsub
+    metas = self.backend.client.mget(self.subscribed_to)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\redis\commands\core.py", line 1987, in mget
+    return self.execute_command("MGET", *args, **options)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\redis\client.py", line 1266, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\redis\connection.py", line 1457, in get_connection
+    connection.connect()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\redis\connection.py", line 705, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to localhost:6379. Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\contrib\auth\mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\contrib\auth\mixins.py", line 109, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\edit.py", line 184, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\edit.py", line 153, in post
+    return self.form_valid(form)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\NewsPaper\news\views.py", line 45, in form_valid
+    send_email_task.delay(post.pk)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\celery\app\task.py", line 425, in delay
+    return self.apply_async(args, kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\celery\app\task.py", line 575, in apply_async
+    return app.send_task(
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\celery\app\base.py", line 788, in send_task
+    amqp.send_task_message(P, name, message, **options)
+  File "C:\Users\blkswn\Desktop\Python\Python38\lib\contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\kombu\connection.py", line 450, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: Error 10061 connecting to localhost:6379. Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+2023-08-01 19:50:03 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\servers\basehttp.py:187 - "POST /news/create/ HTTP/1.1" 500 285322

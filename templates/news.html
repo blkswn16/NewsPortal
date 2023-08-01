@@ -11,43 +11,49 @@ News
 
 <h3>{% current_time '%b %d %Y' %}</h3>
 
-<h1>Новостей на странице - "{{ news|length }}" </h1>
+<h3>Новостей на странице - "{{ news|length }}" </h3>
 
 
-   <h1>Все новости</h1>
-   <hr>
+   <h2>Все новости</h2>
+
    {% if news %}
-       <table> <!-- Начинаем описывать таблицу -->
-           <tr> <!-- Добавляем строку -->
-               <td> <!-- Добавляем ячейку в строку -->
-                   Заголовок
-               </td>
+       <table class="table table-bordered" cellspacing="2" cellpadding="3" border="3" width="50%">
+           <tr>
                <td>
                    Дата
                </td>
-               <td> <!-- Добавляем ещё одну ячейку в строку и так далее -->
+               <td>
+                   Категория
+               </td>
+               <td>
+                   Заголовок
+               </td>
+               <td>
                    Текст статьи
                </td>
-           </tr> <!-- Не забываем закрыть HTML-тег строки -->
+           </tr>
            {% for post in news %}
            <tr>
-               <!-- Не забываем, что переменные в шаблоне ничем не отличаются
-                от переменных в Python. Здесь также можно получать доступ к
-                полям объекта модели. Например, здесь мы выводим имя,
-                в следующем столбце описание, и т.д.  -->
-               <td>{{ post.title|censor }}</td>
                <td>{{ post.time_created|date:'d M Y' }}</td>
+               <td>
+                   {% for category in post.category.all %}
+                   <a href="{% url 'category_list' category.id %}">{{ category }}
+                       </a>
+                   {% endfor %}
+               </a>
+               </td>
+               <td>
+                   <a href="{{ post.get_absolute_url }}"> {{ post.title|censor }} </a> </td>
                <td>{{ post.text|truncatewords:20|censor }}</td>
 
            </tr>
            {% endfor %}
-       </table> <!-- ... и таблицы -->
+       </table>
    {% else %}
        <h2>Новостей нет!</h2>
    {% endif %}
 
       {% if page_obj.has_previous %}
-       {# Для каждой ссылки пагинации указываем обработку через новый тег #}
        <a href="?{% url_replace page=1 %}">1</a>
        {% if page_obj.previous_page_number != 1 %}
            ...

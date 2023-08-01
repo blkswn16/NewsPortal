@@ -16,5 +16,10 @@ Post
 
 <hr>
 Дата публикации: {{ post.time_created|date:'d M Y' }}
+<hr>
+                   {% for category in post.category.all %}
+                        <a href="{% url 'category_list' category.id %}">{{ category }}
+                       </a>
+                    {% endfor %}
 
 {% endblock content %}
