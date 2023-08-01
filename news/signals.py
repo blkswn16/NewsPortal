@@ -19,7 +19,7 @@ def send_notifications(preview, pk, title, subscribers):
         subject=title,
         body='',
         from_email=settings.DEFAULT_FROM_EMAIL,
-        to=['stas-sandin@mail.ru'],    # тут пишем to=subscribe для отправки на почту подписчикам
+        to=subscribers,
     )
     # print(settings.DEFAULT_FROM_EMAIL)
     msg.attach_alternative(html_context, 'text/html')

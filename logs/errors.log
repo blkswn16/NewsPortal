@@ -2130,3 +2130,59 @@ Traceback (most recent call last):
     raise SMTPAuthenticationError(code, resp)
 smtplib.SMTPAuthenticationError: (535, b'5.7.8 Error: authentication failed: This user does not have access rights to this service 1690916938-w8XTj2xqJuQ0')
 2023-08-01 22:08:58 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\servers\basehttp.py:187 - "POST /news/create/ HTTP/1.1" 500 181197
+2023-08-01 22:22:25 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\utils\log.py:241 - Internal Server Error: /news/create/
+Traceback (most recent call last):
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\contrib\auth\mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\contrib\auth\mixins.py", line 109, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\edit.py", line 184, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\edit.py", line 153, in post
+    return self.form_valid(form)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\NewsPaper\news\views.py", line 46, in form_valid
+    return super().form_valid(form)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\views\generic\edit.py", line 135, in form_valid
+    self.object = form.save()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\forms\models.py", line 549, in save
+    self._save_m2m()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\forms\models.py", line 530, in _save_m2m
+    f.save_form_data(self.instance, cleaned_data[f.name])
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\db\models\fields\related.py", line 1963, in save_form_data
+    getattr(instance, self.attname).set(data)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\db\models\fields\related_descriptors.py", line 1169, in set
+    self.add(*new_objs, through_defaults=through_defaults)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\db\models\fields\related_descriptors.py", line 1087, in add
+    self._add_items(
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\db\models\fields\related_descriptors.py", line 1373, in _add_items
+    signals.m2m_changed.send(
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\dispatch\dispatcher.py", line 176, in send
+    return [
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\dispatch\dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\NewsPaper\news\signals.py", line 39, in notify_about_new_post
+    send_notifications(instance.preview(), instance.pk, instance.title, subscribers_emails)
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\NewsPaper\news\signals.py", line 26, in send_notifications
+    msg.send()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\mail\message.py", line 298, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\mail\backends\smtp.py", line 124, in send_messages
+    new_conn_created = self.open()
+  File "C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\mail\backends\smtp.py", line 91, in open
+    self.connection.login(self.username, self.password)
+  File "C:\Users\blkswn\Desktop\Python\Python38\lib\smtplib.py", line 734, in login
+    raise last_exception
+  File "C:\Users\blkswn\Desktop\Python\Python38\lib\smtplib.py", line 723, in login
+    (code, resp) = self.auth(
+  File "C:\Users\blkswn\Desktop\Python\Python38\lib\smtplib.py", line 646, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Error: authentication failed: This user does not have access rights to this service 1690917744-OMXEk0xWkGk0')
+2023-08-01 22:22:25 [ERROR] C:\Users\blkswn\PycharmProjects\NewsPortal\venv\lib\site-packages\django\core\servers\basehttp.py:187 - "POST /news/create/ HTTP/1.1" 500 181197
